@@ -3,6 +3,9 @@ import { assets } from '../assets/assets'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { AppContext } from '../context/AppContext'
 
+// Replace this with your real admin site link (no "/" at the end)
+const ADMIN_URL = 'https://YOUR-ADMIN-LINK.vercel.app'
+
 const Navbar = () => {
   const navigate = useNavigate()
   const [showMenu, setShowMenu] = useState(false)
@@ -80,6 +83,11 @@ const Navbar = () => {
             </>
           )}
         </NavLink>
+
+        {/* Admin Panel (opens the admin site in a new tab) */}
+        <a href={ADMIN_URL} target='_blank' rel='noopener noreferrer'>
+          <li className='py-1'>ADMIN PANEL</li>
+        </a>
 
       </ul>
 
@@ -214,6 +222,17 @@ const Navbar = () => {
                 CONTACT
               </p>
             </NavLink>
+
+            <a
+              href={ADMIN_URL}
+              target='_blank'
+              rel='noopener noreferrer'
+              onClick={() => setShowMenu(false)}
+            >
+              <p className='px-4 py-2 rounded inline-block'>
+                ADMIN PANEL
+              </p>
+            </a>
 
           </ul>
 
