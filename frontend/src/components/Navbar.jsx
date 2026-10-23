@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { AppContext } from '../context/AppContext'
 
 // Replace this with your real admin site link (no "/" at the end)
-const ADMIN_URL = 'https://YOUR-ADMIN-LINK.vercel.app'
+const ADMIN_URL = 'https://https://prescripto-9yps.vercel.app'
 
 const Navbar = () => {
   const navigate = useNavigate()
